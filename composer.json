@@ -1,0 +1,26 @@
+{
+  "name": "mrssoft/yii-icqbot",
+  "version": "1.0.0",
+  "description": "Yii ICQ bot API",
+  "keywords": [
+    "Yii2",
+    "ICQ",
+    "BOT",
+    "API"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "mrs2000",
+      "email": "mrs2000@inbox.ru"
+    }
+  ],
+  "require": {
+    "php": ">=8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "mrssoft\\icqbotapi\\": "src/"
+    }
+  }
+}
