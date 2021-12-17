@@ -18,13 +18,13 @@ The preferred way to install this extension is through
 Either run
 
 ```
-php composer.phar require --prefer-dist mrssoft/icqbotapi "*"
+php composer.phar require --prefer-dist mrssoft/yii2-icqbot "*"
 ```
 
 or add
 
 ```
-"mrssoft/icqbotapi": "*"
+"mrssoft/yii2-icqbot": "*"
 ```
 
 to the require section of your `composer.json` file.

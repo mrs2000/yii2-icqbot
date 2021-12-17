@@ -1,6 +1,6 @@
 {
-  "name": "mrssoft/yii-icqbot",
-  "version": "1.0.0",
+  "name": "mrssoft/yii2-icqbot",
+  "version": "0.0.2",
   "description": "Yii ICQ bot API",
   "keywords": [
     "Yii2",
