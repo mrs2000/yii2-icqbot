@@ -59,7 +59,7 @@ class IcqBot extends Component
         if ($this->mutex->acquire('icq-poll-events')) {
 
             $botParams = $this->loadBotParams();
-            $lastEventId = $botParams['lastEventId'] ?? 11;
+            $lastEventId = $botParams['lastEventId'] ?? 0;
 
             try {
                 $params = [
@@ -93,7 +93,7 @@ class IcqBot extends Component
         return $events;
     }
 
-    private function request(string $endpoint, array $query = [], array $options = []): ?array
+    protected function request(string $endpoint, array $query = [], array $options = []): ?array
     {
         $query['token'] = $this->token;
 
@@ -101,10 +101,10 @@ class IcqBot extends Component
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_FOLLOWLOCATION => true,
         ];
-/*        if (count($body)) {
-            $options[CURLOPT_POST] = true;
-            $options[CURLOPT_POSTFIELDS] = json_encode($body);
-        }*/
+        /*        if (count($body)) {
+                    $options[CURLOPT_POST] = true;
+                    $options[CURLOPT_POSTFIELDS] = json_encode($body);
+                }*/
 
         $query = array_map(static function ($item) {
             if ($item === true) {

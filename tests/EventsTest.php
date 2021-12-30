@@ -21,7 +21,5 @@ class EventsTest extends TestBase
         }
 
         self::assertNotEmpty($events);
-
-        //https://icq.com/invite/novatorgroupbot?start=534
     }
 }

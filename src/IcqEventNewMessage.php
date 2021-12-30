@@ -11,4 +11,12 @@ class IcqEventNewMessage extends IcqEvent
         parent::__construct($bot, $event);
         $this->text = $event['payload']['text'] ?? '';
     }
+
+    public function reply(array $params): ?array
+    {
+        if (isset($params['text'])) {
+            return $this->bot->sendText($this->userId, $params['text'], $params['buttons'] ?? []);
+        }
+        return null;
+    }
 }
